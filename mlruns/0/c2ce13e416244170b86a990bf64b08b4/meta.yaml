@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/Projects/NetworkSecurity/mlruns/0/c2ce13e416244170b86a990bf64b08b4/artifacts
+end_time: 1755970910384
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c2ce13e416244170b86a990bf64b08b4
+run_name: clean-panda-563
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755970899053
+status: 3
+tags: []
+user_id: DeepakPandey
