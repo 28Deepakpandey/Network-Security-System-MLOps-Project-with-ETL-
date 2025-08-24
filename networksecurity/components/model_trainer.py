@@ -26,6 +26,11 @@ from sklearn.ensemble import (
 )
 
 import mlflow
+import mlflow.sklearn
+import dagshub
+import pickle
+dagshub.init(repo_owner='deepakpandey28july', repo_name='Network-Security-System-MLOps-Project-with-ETL-', mlflow=True)
+
 
 class ModelTrainer:
     def __init__(self,model_trainer_config:ModelTrainerConfig,data_transformation_artifact:DataTransformationArtifact):
@@ -45,7 +50,7 @@ class ModelTrainer:
             mlflow.log_metric("f1_score",f1_score)
             mlflow.log_metric("precision_score",precision_score)
             mlflow.log_metric("recall_score",recall_score)
-            mlflow.sklearn.log_model(best_model, name="model")
+            mlflow.sklearn.log_model(best_model, "model")
         
     
     def train_model(self,X_train,y_train,x_test,y_test):
