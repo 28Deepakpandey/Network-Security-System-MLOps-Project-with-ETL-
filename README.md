@@ -429,5 +429,5 @@ This repo uses MIT License (add LICENSE file in repo root).
 Deepak Pandey
 B.Tech – Artificial Intelligence & Machine Learning
 
-🌐 GitHub
- | LinkedIn
+GitHub: https://github.com/28Deepakpandey
+LinkedIn: https://www.linkedin.com/in/deepak-pandey
