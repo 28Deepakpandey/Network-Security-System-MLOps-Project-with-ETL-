@@ -421,7 +421,7 @@ Add unit tests for new functionality.
 
 License
 
-This repo uses MIT License (add LICENSE file in repo root).
+This repo uses MIT License .
 
 👨‍💻 Author
 
