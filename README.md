@@ -430,4 +430,4 @@ Deepak Pandey
 B.Tech – Artificial Intelligence & Machine Learning
 
 GitHub: https://github.com/28Deepakpandey
-LinkedIn: https://www.linkedin.com/in/deepak-pandey
+LinkedIn: www.linkedin.com/in/deepak-pandey28
