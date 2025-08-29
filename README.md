@@ -108,30 +108,41 @@ Data Sources (CSV files / push_data.py)  →  MongoDB Atlas (collection)
 
 Project structure — file/folder explanations
 
-Network-Security/
-│── app.py                          # FastAPI application entrypoint
-│── requirements.txt                # Python dependencies
-│── Dockerfile                      # Docker build file
-│── .github/workflows/ci-cd.yaml    # GitHub Actions CI/CD workflow
-│── data_schema/schema.yaml         # Data schema for data validation
-│── templates/                      # FastAPI UI templates
-│   └── table.html                  # Displays prediction results
-│
-├── networksecurity/                # Core ML + MLOps code
-│   ├── components/                 # Pipeline components (ingestion, training, etc.)
-│   ├── constant/                   # Project constants
-│   ├── entity/                     # Config & artifact entity classes
-│   ├── exception/                  # Custom exception handling
-│   ├── logging/                    # Centralized logging system
-│   ├── pipeline/                   # Orchestration of ML pipeline
-│   ├── utils/                      # Helper functions
-│   └── cloud/                      # Cloud integration utilities (future)
-│
-├── logs/                           # Log files
-├── Network_Data/                   # Raw + processed datasets
-├── Notebooks/                      # Jupyter notebooks for exploration
-└── final_model/                    # Saved trained models & preprocessors
+app.py — FastAPI application (endpoints: /train, /predict) and MongoDB connection.
 
+requirements.txt — Python dependencies (FastAPI, scikit-learn, pandas, pymongo, xgboost, uvicorn, certifi, python-dotenv, etc.).
+
+Dockerfile — Docker image build instructions for the app.
+
+.github/workflows/ — GitHub Actions workflows for CI/CD (build, test, push image, deploy).
+
+data_schema/schema.yaml — expected columns, dtypes and simple validation rules.
+
+templates/table.html — Jinja2 template to render prediction DataFrame as HTML.
+
+networksecurity/ — main package:
+
+  components/ — data_ingestion.py, data_transformation.py, data_validation.py, model_trainer.py — modular pipeline components.
+  
+  pipeline/ — training_pipeline.py orchestrates components end-to-end.
+  
+  utils/ — main_utils and ml_utils helper functions and NetworkModel wrapper (applies preprocessor then model).
+  
+  logging/ — centralized logger configuration.
+  
+  exception/ — custom exception types to standardize error handling.
+  
+  cloud/ — helpers for cloud I/O (S3/ECR helpers or planned).
+
+final_model/ — serialized artifacts: preprocessor.pkl, model.pkl.
+
+Network_Data/ — raw or local datasets used for experimentation.
+
+prediction_output/ — where CSV prediction outputs are written (output.csv).
+
+push_data.py — helper to push dataset(s) into MongoDB (used for continuous ingestion).
+
+test_mongodb.py — quick MongoDB connectivity test.
 
 Setup & run (detailed)
 Prerequisites
