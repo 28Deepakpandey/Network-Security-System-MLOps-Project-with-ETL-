@@ -2,7 +2,6 @@ Network Security System – End-to-End MLOps with ETL
 
 Network Security System is a production-oriented MLOps project that detects phishing / malicious websites (network intrusion) using a full automated pipeline: data ingestion → validation → ETL/preprocessing → model training → artifact versioning → inference API → CI/CD → cloud deployment → experiment tracking.
 
-This README is the final, complete, copy-paste-ready documentation for your GitHub repo. It includes everything a reviewer, hiring manager or fellow developer needs to understand, run, reproduce, and extend the project.
 
 🧭 Quick links
 
